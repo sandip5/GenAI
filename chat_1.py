@@ -61,9 +61,7 @@ result = client.chat.completions.create(
     response_format={"type": "json_object"},
     messages=[
         { "role": "system", "content": system_prompt },
-        { "role": "user", "content": "what is 3 + 4 * 5" }
-        
-        #
+        { "role": "user", "content": "what is 3 + 4 * 5" },
         {"role": "assistant", "content": json.dumps({"step": "analyse", "content": "The user is interested in a basic arithmetic operation involving addition and multiplication." })}
     ]
 )
